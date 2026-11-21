@@ -9,10 +9,6 @@ Lately I've been working on [RetroFusion](https://github.com/mauroalvare/RetroFu
 ## Projects
 
 <!-- projects:start -->
-| Project | Description | Stack |
-| :--- | :--- | :--- |
-| [**RetroFusion**](https://github.com/mauroalvare/RetroFusion)<br/><sub>[Latest release](https://github.com/mauroalvare/RetroFusion/releases/latest)</sub> | Retro emulator for Windows and Linux (Z80, 8080/8088, 6502; C64, NES, ZX Spectrum, arcade, PC) that can mix mechanics from different 8-bit games with AI and generate new games in assembly. | `C#` `Python` |
-| [**arduino-ti3**](https://github.com/mauroalvare/arduino-ti3)<br/><sub>[Live demo](https://mauroalvare.github.io/arduino-ti3/)</sub> | Arduino project that monitors electricity use in classrooms, with a web dashboard to see where energy is being wasted. | `JavaScript` `CSS` `HTML` |
 <!-- projects:end -->
 
 ## Open source
