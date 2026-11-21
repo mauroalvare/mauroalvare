@@ -1,6 +1,8 @@
-# Rebuilds the images the profile README shows and publishes them to the "output" branch.
+# Keeps the profile README up to date on its own, once a day.
+# - README "Lately..." line and "Projects" table: rebuilt from your repositories and pull requests.
 # - contributions.svg: repositories you don't own where you have pull requests (found automatically).
 # - github-snake*.svg: optional contribution snake (only shown if you add it to the README).
+# To keep a repository out of "Projects", add its name to HIDE_REPOS below (or archive it).
 name: Update profile cards
 
 on:
@@ -13,12 +15,27 @@ on:
 permissions:
   contents: write
 
+env:
+  HIDE_REPOS: mompenaltodibu,labprog1
+
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
+
+      - name: Update README sections
+        run: |
+          python3 .github/scripts/update_readme.py "${{ github.repository_owner }}" README.md
+          if ! git diff --quiet README.md; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update profile README sections" README.md
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Contributions card
         run: python3 .github/scripts/contributions.py "${{ github.repository_owner }}" dist/contributions.svg
