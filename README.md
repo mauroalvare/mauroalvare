@@ -1,6 +1,6 @@
 ### Hi, I'm Mauro
 
-I study computer engineering. I like making games and writing tools and scripts for pretty much anything, and I'm also into emulation, reverse engineering and low-level programming, from CPU instruction sets to graphics. Every now and then I fix someone's PC too.
+I'm a computer engineering student who enjoys making games, writing tools and scripts for pretty much anything. I'm also into emulation, reverse engineering and low-level programming, from CPU instruction sets to graphics. Every now and then, I fix someone's PC too.
 
 <!-- lately:start -->
 Lately I've been working on [RetroFusion](https://github.com/mauroalvare/RetroFusion) and contributing to [AnyPS5](https://github.com/boykopovar/AnyPS5).
